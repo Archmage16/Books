@@ -1,0 +1,13 @@
+.bookDetail {
+    padding: 20px;
+    text-align: center;
+}
+
+.coverImage {
+    width: 200px;
+    height: auto;
+}
+
+.bookInfo {
+    margin-top: 20px;
+}

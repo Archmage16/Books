@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* пространство между элементами */
+}
+
+.bookItem {
+    flex: 1 1 calc(20% - 20px); /* 5 книг в ряд с отступами */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.coverImage {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.bookInfo {
+    margin-top: 10px;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.author {
+    font-size: 14px;
+    color: #555;
+}

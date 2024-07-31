@@ -19,7 +19,23 @@ a{
 
 .book-list{
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
+}
+.search_system{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+.input{
+    width: 400px;
+    padding: 10px 0 8px 20px;
+    border-radius: 50px;
+    font-size: 30px;
+}
+.search_btn{
+    width: 100px;
+    padding: 5px;
+    border-radius: 30px;
 }

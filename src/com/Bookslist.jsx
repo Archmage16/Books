@@ -1,18 +1,28 @@
-const Bookslist = ({books}) => {
-  return (
-    <div className='book-list'>
-      {books.map((book) => (
-        book.volumeInfo && book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.smallThumbnail ? (
-          <img src={book.volumeInfo.imageLinks.smallThumbnail} alt={book.volumeInfo.title} key={book.id} />
-        ) : (
-          <p key={book.id}>No image available</p>
-        )
-      ))}
-    </div>
-  )
+import React from 'react'
+import './Bookslist.css'
+
+const Bookslist = ({ books }) => {
+    return (
+        <div className="container">
+            {books.length === 0 ? (
+                <p>No books</p>
+            ) : (
+                books.map((book) => (
+                    <div key={book.key} className="bookItem">
+                        <img
+                            src={`https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`}
+                            alt={book.title}
+                            className="coverImage"
+                        />
+                        <div className="bookInfo">
+                            <h3 className="title">{book.title}</h3>
+                            <p className="author">{book.author_name ? book.author_name.join(', ') : 'Unknown author'}</p>
+                        </div>
+                    </div>
+                ))
+            )}
+        </div>
+    )
 }
 
 export default Bookslist
-            // <h1 key={book.id}>{book.volumeInfo.title}</h1>
-            // <img src={book.volumeInfo.imageLinks.smallThumbnail} alt="" key={book.id}/>
-            // 
